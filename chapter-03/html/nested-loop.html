@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function nested(y, x){
+
+      //     let result = ''
+      //     for(let i = 1; i <= y; i++){
+      //         for(let j = i; j <= x; j++){
+      //             result += j;
+      //         }
+      //         result += "\n"
+      //     }
+      //     console.log(result)
+      // }
+      // nested(5,5)
+
+      const listKota = ['jakarta', 'bandung', 'surabaya'];
+      const listTempat = ['taman', 'hutan', 'mall'];
+      let kota = "";
+      for (let i = 0; i < listKota.length; i++) {
+        // kota.push(listKota[i]);
+        kota += "kota : " + listKota[i] + "\n"
+        for (let j = 0; j < listTempat.length; j++) {
+        //   kota.push(listTempat[j]);
+            kota +="\t" + listTempat[j] + '\n' 
+        }
+      }
+      console.log(kota);
+    </script>
+  </body>
+</html>

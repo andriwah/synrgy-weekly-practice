@@ -1,0 +1,181 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "E-Commerce API",
+    "description": "E-Commerce API MOCK",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Auth",
+      "description": "API for authentication"
+    },
+    {
+      "name": "Products",
+      "description": "API for managing products data"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/auth/register": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Register Endpoint",
+        "parameters": [
+          {
+            "name": "register",
+            "in": "body",
+            "description": "User to register.",
+            "schema": {
+              "$ref": "#/definitions/Register"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Success registering member."
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Log in Endpoint",
+        "parameters": [
+          {
+            "name": "login",
+            "in": "body",
+            "description": "Log in to account",
+            "schema": {
+              "$ref": "#/definitions/Login"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success Login."
+          }
+        }
+      }
+    },
+    "/auth/me": {
+      "get": {
+        "tags": ["Auth"],
+        "summary": "Current User in Endpoint",
+        "parameters": [
+          {
+            "name": "Current User",
+            "in": "authorization",
+            "description": "Current User",
+            "schema": {
+              "$ref": "#/definitions/CurrentUser"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get current user success."
+          }
+        }
+      }
+    },
+    "/product/create": {
+      "post": {
+        "tags": ["Products"],
+        "summary": "Post Product in Endpoint",
+        "parameters": [
+          {
+            "name": "Product",
+            "in": "body",
+            "description": "Create New Product",
+            "schema": {
+              "$ref": "#/definitions/Create"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully creating product."
+          }
+        }
+      }
+    },
+    "/product": {
+      "get": {
+        "tags": ["Products"],
+        "summary": "Get All Products in Endpoint",
+        "parameters": [
+          {
+            "name": "All Product",
+            "in": "body",
+            "description": "Get All Products",
+            "schema": {
+              "$ref": "#/definitions/Products"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully show all product."
+          }
+        }
+      }
+    },
+    "/product/upadate/{id}": {
+      "put": {
+        "tags": ["Products"],
+        "summary": "Update Products in Endpoint",
+        "parameters": [
+          {
+            "name": "Update Product",
+            "in": "body",
+            "description": "Update Products",
+            "schema": {
+              "$ref": "#/definitions/Update"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully update product."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Register": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header",
+      "description": "Enter your bearer token in the format **Bearer &lt;token>**"
+    }
+  }
+}

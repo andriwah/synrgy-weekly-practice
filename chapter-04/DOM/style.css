@@ -1,0 +1,65 @@
+.container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#background-color {
+  margin: 5px 0 10px 0;
+}
+
+#color-title {
+  margin: 5px 0 10px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.soal {
+  padding-top: 20px;
+}
+
+#list-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+#list-box > div {
+  margin: 10px;
+}
+
+#box-1 {
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
+}
+
+#box-2 {
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
+}
+
+#content-box {
+  width: 300px;
+  height: 200px;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.container > input {
+  margin: 10px 0 10px 0;
+}
+
+#button-submit{
+  margin-left: 10px;
+}
+
+#button-delete{
+  margin-left: 10px;
+}

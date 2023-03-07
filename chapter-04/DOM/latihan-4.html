@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Javascript DOM</title>
+    <link rel="stylesheet" href="/latihan-4/style.css" />
+  </head>
+  <body>
+    <!-- NO 1 -->
+    <p class="soal">
+      Buatlah sebuah tag h1 berisikan text “Latihan Javascript DOM” <br />
+      Buatlah sebuah input color untuk mengubah warna background dari body <br />
+      Buatlah sebuah input color untuk mengubah warna text dari h1 <br />
+      Buatlah sebuah button, button ini yang akan menjadi trigger untuk melakukan perubahan warna sesuai value pada kedua input
+    </p>
+    <div class="container">
+      <h1 id="title">Latihan Javascript DOM</h1>
+      <form class="card">
+        <p>CHANGE BACKGROUND COLOR : <input id="background-color" type="color" /></p>
+        <p>CHANGE FONT COLOR TITLE : <input id="color-title" type="color" /></p>
+        <button id="button">Submit</button>
+      </form>
+    </div>
+
+    <!-- NO 2 -->
+    <p class="soal">
+      Buatlah 2 buah kotak di kanan dan dikiri, gunakan flex / grid, warna hijau dan biru <br />
+      Jika kotak tersebut di klik, akan menjadi hilang <br />
+      Buatlah sebuah button reset, untuk mengembalikan display kedua kotak tersebut menjadi visible
+    </p>
+    <div class="container">
+      <div id="list-box">
+        <div id="box-1" style="background-color: green" onclick="removeGreen()"></div>
+        <div id="box-2" style="background-color: blue" onclick="removeBlue()"></div>
+      </div>
+      <button id="reset">Reset</button>
+    </div>
+
+    <!-- NO 3 -->
+    <p class="soal">
+      Buatlah sebuah kotak div kosong dan berikan border <br />
+      Buatlah sebuah input text <br />
+      Buatlah sebuah button submit <br />
+      Ketika button di klik, append sebuah tag p berisikan text dari input, kedalam kotak div
+    </p>
+    <div class="container">
+      <div id="content-box">
+      </div>
+      <p>Type here : <input id="input-text" type="text" placeholder="Type Here"><button id="button-submit">Submit</button><button id="button-delete">Remove</button></p>
+    </div>
+  </body>
+  <script src="/latihan-4/latihan-4.js"></script>
+</html>
